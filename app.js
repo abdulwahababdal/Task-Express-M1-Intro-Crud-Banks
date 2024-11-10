@@ -32,7 +32,7 @@ app.put("/accounts/:accountId", (req, res) => {
   res.status(200).json(foundAcc);
 });
 
-app.delete("accounts/:accountId", (req, res) => {
+app.delete("/accounts/:accountId", (req, res) => {
   const foundAcc = accounts.find(
     (account) => account.id === parseInt(req.params.accountId)
   );
